@@ -4,6 +4,16 @@ What you see is a repository of my solutions for algorithmic problems presented 
 
 Link to the ASD course: https://usosweb.mimuw.edu.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&prz_kod=1000-213bASD
 
-# What is the range of presented problems?
+# What is the difficulty of presented problems?
 
-All showcased projects are either exam tasks or homework assignments. Solutions use
+All showcased projects are either exam tasks (here I chose only problems marked as harder problems) [https://szkopul.edu.pl/c/asd-playground/p/]
+or homework assignments [https://szkopul.edu.pl/c/laboratorium-z-asd-2022/dashboard/].
+
+# What about correctness of that algorithms?
+
+All presented here solutions passed 100% tests on szkopuł server and thus are correct. 
+
+# How to read solutions? 
+
+Every solution will contain description of the problem (see description.txt), documentation of implemented functions (see documention.h file), implementation file (see main.cpp) 
+and local tests (see local_tests.cpp).
