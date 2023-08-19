@@ -46,35 +46,34 @@ static void generate_partition(vector<tuple<int,char,uint64_t>>& without_copies,
     uint64_t sum;
     int index = 1;
     int length = without_copies.size();
-
-    int start = get<0>(without_copies[0]);
+    int start_point = get<0>(without_copies[0]);
     sum = get<2>(without_copies[0]);
 
     while (index < length) {
         char znak = get<1>(without_copies[index]);
-        int koniec = get<0>(without_copies[index]);
-        uint64_t degree = get<2>(without_copies[index]);
+        int end_point = get<0>(without_copies[index]);
+        uint64_t multiplicity = get<2>(without_copies[index]);
 
         if (znak == '+') {
-            final_map[sum] += (koniec - start);
-            start = koniec;
-            sum += degree;
+            final_map[sum] += (end_point - start_point); // Length of interval.
+            start_point = end_point;
+            sum += multiplicity;
             index++;
         }
         else {
-            if (start == koniec) {
+            if (start_point == end_point) {
                 final_map[sum] += 1;
-                sum -= degree;
+                sum -= multiplicity;
 
                 if (sum != 0) {
-                    start++;
+                    start_point++;
                     index++;
                 }
                 else {
                     index++;
 
                     if (index < length) {
-                        start = get<0>(without_copies[index]);
+                        start_point = get<0>(without_copies[index]);
                         sum = get<2>(without_copies[index]);
                         index++;
                     }
@@ -84,18 +83,18 @@ static void generate_partition(vector<tuple<int,char,uint64_t>>& without_copies,
                 }
             }
             else {
-                final_map[sum] += koniec - start + 1;
-                sum -= degree;
+                final_map[sum] += end_point - start_point + 1; // Length of interval.
+                sum -= multiplicity;
 
                 if (sum != 0) {
-                    start = koniec + 1;
+                    start_point = end_point + 1;
                     index++;
                 }
                 else {
                     index++;
 
                     if (index < length) {
-                        start = get<0>(without_copies[index]);
+                        start_point = get<0>(without_copies[index]);
                         sum = get<2>(without_copies[index]);
                         index++;
                     }
@@ -119,8 +118,8 @@ int main() {
 
     int a,b,c;
     int local_index1 = 0;
-    map<uint64_t, uint64_t> final_map;
-    vector<tuple<int, char, int>> original_intervals(2 * n);
+    map<uint64_t, uint64_t> final_map; // Will contatin multiplicity -> number of elements with that degree.
+    vector<tuple<int, char, int>> original_intervals(2 * n); 
 
     for (int i = 0; i < n; i++) {
         std::cin >> a >> b >> c;
@@ -130,10 +129,10 @@ int main() {
 
         local_index1 = local_index1 + 2;
     }
-
+    
     sort(original_intervals.begin(), original_intervals.end());
     auto without_copies = remove_copies(original_intervals);
-    generate_partition(without_copies, final_map);
+    generate_partition(without_copies, final_map); // partition will be stored in final_map
 
     if (final_map.size() == 1) {
         cout << 0 << "\n";
@@ -145,6 +144,7 @@ int main() {
     uint64_t sum_of_elements;
     int counter = 0;
 
+    // Walk through final_map to find the number of unordered pairs with different multiplicity
     for (auto i : final_map) {
         if (counter == 0) {
             unordered_pairs_number = i.second;
