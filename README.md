@@ -6,7 +6,7 @@ Link to the ASD course: https://usosweb.mimuw.edu.pl/kontroler.php?_action=katal
 
 # What is the difficulty of presented problems?
 
-All showcased projects are either exam tasks (here I chose only problems marked as harder problems) [https://szkopul.edu.pl/c/asd-playground/p/]
+All showcased projects are either exam tasks (here I have speciffically chosen problems that are identified as more advanced) [https://szkopul.edu.pl/c/asd-playground/p/]
 or homework assignments [https://szkopul.edu.pl/c/laboratorium-z-asd-2022/dashboard/].
 
 # What about correctness of that algorithms?
@@ -17,3 +17,7 @@ All presented here solutions passed 100% tests on szkopuł server and thus are c
 
 Every solution will contain description of the problem (see description.txt), documentation of implemented functions (see documention.h file), implementation file (see main.cpp) 
 and local tests (see local_tests.cpp).
+
+# What programming language I use for writing solutions?
+
+Most of the time I use C++ (g++:8.3 std=c++17) for implementing algorithms.
