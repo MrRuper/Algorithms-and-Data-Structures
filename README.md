@@ -16,8 +16,13 @@ All presented here solutions passed 100% tests on szkopuł server and thus are c
 # How to read solutions? 
 
 Every problem has its own folder. Every solution will contain description of the problem (see description.txt), documentation of implemented functions 
-(see documention.h file), implementation file (see main.cpp) and local tests (see local_tests.cpp).
+(see documention.h file), implementation file (see main.cpp) and local tests (see local_tests.txt).
 
 # What programming language I use for writing solutions?
 
 Most of the time I use C++ (g++:8.3 std=c++17) for implementing algorithms.
+
+# How to compile programs?
+
+To compile programs You need to download the code from main.cpp to Your machine (with installed C++) and run it there on Your own tests or on my tests which are 
+in the local_tests.txt.
