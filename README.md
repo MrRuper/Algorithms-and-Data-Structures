@@ -15,8 +15,8 @@ All presented here solutions passed 100% tests on szkopuł server and thus are c
 
 # How to read solutions? 
 
-Every solution will contain description of the problem (see description.txt), documentation of implemented functions (see documention.h file), implementation file (see main.cpp) 
-and local tests (see local_tests.cpp).
+Every problem has its own folder. Every solution will contain description of the problem (see description.txt), documentation of implemented functions 
+(see documention.h file), implementation file (see main.cpp) and local tests (see local_tests.cpp).
 
 # What programming language I use for writing solutions?
 
