@@ -19,11 +19,13 @@ Your program has to print on standard output flow one integer number - the numbe
 
 # Example:
 
-For an input:                 the correct answer is:
-3			      9
+For an input:         
+3		
 1 3 2
 3 4 3
 3 5 1
+
+the correct answer is: 9.
 
 Explanation: All interested pairs are: {1,3}, {1,4}, {1,5}, {2,3}, {2,4}, {2,5}, {3,4}, {3,5}, {4,5}.
 
