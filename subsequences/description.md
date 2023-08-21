@@ -9,7 +9,7 @@ elements?
 Subsequences are different if and only if they are placed in different positions. Additionally we assume only non degenerate susequences.
 
 # Input
-In the first row of standard input You get two numbers n and k ($1 \leq n, k \leq  500 000), separated by one Space char. The second row has n-integers $a_i$ 
+In the first row of standard input You get two numbers n and k ($1 \leq n, k \leq  500 000$), separated by one Space char. The second row has n-integers $a_i$ 
 separated by Space char ($0 \leq a_i \leq 1 000 000 000$).
 
 # Output
