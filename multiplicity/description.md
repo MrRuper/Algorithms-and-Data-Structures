@@ -78,7 +78,7 @@ reader could look at the implementation of AVL approach in [AVL_slow_approach.cp
 
 
 
-# Correct and fast solution O( n * log(n) ):
+# Correct and fast solution ```O(n * log(n))```:
 
 Let us think for a moment about faster solutions. Lets take the example showed in description.txt file. 
 ```
