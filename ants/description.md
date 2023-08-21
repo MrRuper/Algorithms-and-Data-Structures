@@ -65,9 +65,9 @@ Now we get the command
 
 ```
 [{1,1}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}]
-     / \                  / \ 	
-      |                    |
-	it1                 it2
+  / \                  / \ 	
+   |                    |
+  it1                  it2
 ```
 
 so we go from it1 to it2 and count how much elements are between them: 1 + 1 + 1 + 1 = 4 but remember that element d does not change it's position
