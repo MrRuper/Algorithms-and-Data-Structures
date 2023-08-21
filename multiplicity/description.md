@@ -50,7 +50,9 @@ intervals and left subtree contains intervals with less first coordinate and rig
 The insertion of some interval [a,b] with multiplicity y to the root could look like this: 
 
 **Step 1** : Let root contains [c,d] as interval and k as his multiplicity.
+
 **Step 2** : Check the way [a,b] intersects [c,d]:
+
 ```
 		If ([a,b] and [c,d] are disjoint) do:
 			 compare a and c
