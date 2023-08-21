@@ -4,7 +4,7 @@ ASD, correctional exam. Available memory: 256 MB.
 
 # Problem description:
 
-There are n intervals [a_i, b_i] with multiplicities. The multiplicity of i-th interval is k_i. For any integer x we define kro(x) as the sum of multiplicities of 
+There are $n$ intervals $[a_i, b_i]$ with multiplicities. The multiplicity of i-th interval is $k_i$. For any integer x we define kro(x) as the sum of multiplicities of 
 such intervals [a_i,b_i] which contain x. Your question is to find out the number of unordered pairs {x,y}, such that kro(x) > 0, kro(y) > 0 and kro(x) != kro(y).
 
 # Input:
