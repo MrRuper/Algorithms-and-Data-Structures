@@ -38,7 +38,7 @@ The main goal is to find the number of unordered pairs which have different (non
 Assume we are able to get from input the next information: (multiplicity, number of elements that have exactly this multiplicity) - then we are done. Indeed if we 
 know the exact distribution of multiplicities the we linearly find the number of all unordered pairs (how?). 
 
-** Main difficulties **:
+**Main difficulties**:
 
 The main difficulty is to find the way to get that inforamtion. As we see from the problem description there could be potentially quite large number n (and thus there 
 could be a large number of intervals) so a "bad" solution will not pass tests. 
@@ -49,8 +49,8 @@ The reader can try to think about the O(n^2) solution. In my opinion one of the 
 intervals and left subtree contains intervals with less first coordinate and right subtree contains intervals with grater first coordinate.
 The insertion of some interval [a,b] with multiplicity y to the root could look like this: 
 
-** Step 1 **: Let root contains [c,d] as interval and k as his multiplicity.
-** Step 2 **: Check the way [a,b] intersects [c,d]:
+**Step 1** : Let root contains [c,d] as interval and k as his multiplicity.
+**Step 2** : Check the way [a,b] intersects [c,d]:
 ```
 		If ([a,b] and [c,d] are disjoint) do:
 			 compare a and c
@@ -79,12 +79,12 @@ reader could look at the implementation of AVL approach in [AVL_slow_approach.cp
 # Correct and fast solution O( n * log(n) ):
 
 Let us think for a moment about faster solutions. Lets take the example showed in description.txt file. 
-
+```
 3
 1 3 2
 3 4 3
 3 5 1
-
+```
 Lets create the vector of size 2 * n which will hold all endpoints and their multiplicities given in the input and let us moreover remember the "type" of the endpoint, i.e. the 
 start point will be marked as "+" and end point as "-". Finally lets sort that vector getting:
 
@@ -92,13 +92,13 @@ all_endpoints = [{1, "+", 2}, {3, "+", 3}, {3, "+", 1}, {3, "-", 2}, {4, "-", 3}
 
 You can also remove copies of the same endpoints getting:
 
-without_copies = [{1, "+", 2}, {3, "+", 4}, {3, "-", 2}, {4, "-", 3}, {5, "-", 1}].
+witeout_copies = [{1, "+", 2}, {3, "+", 4}, {3, "-", 2}, {4, "-", 3}, {5, "-", 1}].
 
 To end this we can note that without_copies vector describes the whole structure of the input intervals, i.e. we can generate all intervals with different 
 degrees just linearly walking through this vector. To make it clear we generate:
-
+```
 [1, 2], 2 
 [3, 3], 6
 [4, 4], 4
 [5, 5], 1 
-
+```
