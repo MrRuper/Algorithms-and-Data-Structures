@@ -55,13 +55,16 @@ searching the first index which is $\geq l$ and second index which is $\leq r$ i
 and simply removes all that block from map inserting to map new pair (d, sum of ants). 
 Let us look at the second example (it is just shorter :shipit:):
 
-Denote that map by m so at the begining our m is ```[{1,1}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}].  ```
+Denote that map by m so at the begining our m is [{1,1}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}]. 
 Now we get the command 
-``` 1 4 2 ```
+```
+ 1 4 2
+ ```
 
  and that means all ants from $[1,4]$ now move to $2$ thus we find $1$ and $4$ in our map and remember there positions in it1,it2:
 
-```[{1,1}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}]
+```
+[{1,1}, {2,1}, {3,1}, {4,1}, {5,1}, {6,1}]
      / \                  / \ 	
       |                    |
 	it1                 it2
