@@ -68,7 +68,7 @@ Step 2: Check the way [a,b] intersects [c,d]:
 
 The problem of that approach is that there is a high cost of keeping the presented structure to be balanced (it is AVL) because one interval can be splited on to 
 many disjoint pieces and thus to insert them one need to do a lot of single AVL insertions. This approach could potentialy have O(n^2) time complexity. An interested
-reader could look at the implementation of AVL approach in AVL_slow_approach.cpp file.
+reader could look at the implementation of AVL approach in [AVL_slow_approach.cpp file.](https://github.com/MrRuper/Algorithms-and-Data-Structures/blob/main/multiplicity/AVL_slow_approach.cpp)
 
 
 
