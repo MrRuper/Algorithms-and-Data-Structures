@@ -32,7 +32,7 @@ Explanation: All interested pairs are: ```{1,3}, {1,4}, {1,5}, {2,3}, {2,4}, {2,
 
 # UNDERSTANDING THE ALGORITHM BEFORE READING IMPLEMENTATION.
 
-** Main goal **:
+**Main goal**
 
 The main goal is to find the number of unordered pairs which have different (nonzero) multiplicities. 
 Assume we are able to get from input the next information: (multiplicity, number of elements that have exactly this multiplicity) - then we are done. Indeed if we 
