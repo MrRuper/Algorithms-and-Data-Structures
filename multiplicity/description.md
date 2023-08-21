@@ -9,9 +9,9 @@ such intervals $[a_i,b_i]$ which contain $x$. Your question is to find out the n
 
 # Input:
 
-In the first line of standard input there is one integer n (1 <= n <= 500 000) - the number of intervals. The next n rows contains the description of intervals, it is
-every row has 3 integer numbers $a_i$, $b_i$, $k_i$ ($1 \geq a_i \geq b_i \geq 10^9$, 1 <= k_i <= 1000), separated by space charakter, describing respectively the interval [a_i,b_i]
-and his multiplicity k_i.
+In the first line of standard input there is one integer $n$ ($1 \leq n \leq 500 000$) - the number of intervals. The next n rows contains the description of intervals, it is
+every row has 3 integer numbers $a_i$, $b_i$, $k_i$ ($1 \leq a_i \leq b_i \leq 10^9$, $1 \leq k_i \leq 1000), separated by space charakter, describing respectively the interval $[a_i,b_i]$
+and his multiplicity $k_i$.
 
 # Output:
 
