@@ -51,6 +51,7 @@ The insertion of some interval [a,b] with multiplicity y to the root could look 
 
 Step 1: Let root contains [c,d] as interval and k as his multiplicity.
 Step 2: Check the way [a,b] intersects [c,d]:
+```
 		If ([a,b] and [c,d] are disjoint) do:
 			 compare a and c
 
@@ -66,7 +67,7 @@ Step 2: Check the way [a,b] intersects [c,d]:
 
 		Else if ([a,b] intersects with [c,d] in the next way: [a {c  b]  d}) do:
 			similar code here...
-
+```
 
 
 The problem of that approach is that there is a high cost of keeping the presented structure to be balanced (it is AVL) because one interval can be splited on to 
